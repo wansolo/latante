@@ -1,0 +1,35 @@
+create table stock(
+stock_id int auto_increment,
+item_name varchar(50) not null,
+current_quantity int not null,
+threshold int not null,
+item_id int not null,
+Primary Key(stock_id)   
+)
+
+create log_entry(
+log_id int auto_increment,
+user_id int not null,
+stock_id int not null,
+log_time varchar(10) not null,
+operation_type varcha(10) not null,
+Primary Key(log_id),
+Foreign Key(user_id) References user(user_id),
+Foreign Key(stock_id) References stock(stock_id)
+)
+
+create category(
+category_id int auto_increment,
+category_name varchar(10) not null,
+Primary Key(category_id) 
+)
+
+
+create table stock_drink(
+drink_id int auto_increment,
+category_id int not null,
+units int not null,
+Primary Key(category_id),
+Foreign Key(category_id) References category(category_id)
+)
+

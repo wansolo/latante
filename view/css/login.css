@@ -1,0 +1,58 @@
+body{
+    background: #2ecc71;
+
+}
+
+#login{
+    margin-top: 160px;
+    background: #1b7a42;
+    border:solid #27ae60 1px;
+    padding-right: 10px;
+   
+}
+#title{
+    background: #1b7a42;
+    text-align: center;
+    color: #f9f9f9;
+}
+#loginform{
+    padding:30px;
+    border-radius: none;
+    margin-top: 30px;
+    color: #f9f9f9;
+}
+#heading{
+    background: #1b7a42;
+    color: #f9f9f9;
+    text-align: center;
+    border-bottom:solid #1b7a42 1px;
+}
+#main {
+    margin: 0 auto;
+    width: 900px;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        
+        float: none;
+        
+    }
+
+    .navbar .navbar-collapse {
+        display: inline-block;
+        text-align: center;
+        
+       
+    }
+}
+#navigation ul li a:hover{
+    color: #d3aa00;
+}
+.Loginerror{
+color: red;
+
+}
+.Loginerror li{
+    list-style: none;
+}

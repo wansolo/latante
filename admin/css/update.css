@@ -1,0 +1,23 @@
+#up1{
+
+	margin-top: 50px;
+    
+    
+
+}
+.btn {
+ width: 200px;
+ margin: 0 auto;
+}
+
+.Adderror{
+color: red;
+
+}
+#edit{
+    width: 80px;
+    height: 30px;
+}
+.Adderror li{
+    list-style: none;
+}

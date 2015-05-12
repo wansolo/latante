@@ -1,0 +1,62 @@
+#row{
+    margin-top: 20px;
+
+}
+#main{
+    margin-top: 50px;
+    margin-right: 0px;
+}
+.btn {
+ width: 250px;
+
+}
+
+#admin1{
+    margin-top: 50px;
+    float: right;
+    margin: 0 auto;
+    
+}
+.btn{
+	width: 250px;
+	height: 50px;
+	border-radius: 0px;
+}
+.Adderror{
+color: red;
+
+}
+#edit{
+    width: 80px;
+    height: 30px;
+}
+.Adderror li{
+    list-style: none;
+}
+#dish{
+    margin-top: 50px;
+    float: right;
+    margin: 0 auto;
+    
+}
+.btn{
+	width: 250px;
+	height: 50px;
+	border-radius: 0px;
+}
+.Adderror{
+color: red;
+
+
+}
+.Adderror li{
+    list-style: none;
+}
+#mn{
+    width: 230px;
+}
+
+
+
+
+

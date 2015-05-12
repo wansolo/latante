@@ -1,0 +1,31 @@
+//back up script 
+$date = date('Y-m-d');
+
+$table_name2 = "order_number";
+$backup_file2  = $date."order_numberBackup.sql";
+$sql2 = "SELECT * INTO OUTFILE '$backup_file2' FROM $table_name2";
+
+
+$retval2 = $database->execute($sql2);
+
+
+
+$table_name1 = "orders";
+$backup_file1  = $date."ordersBackup.sql";
+$sql1 = "SELECT * INTO OUTFILE '$backup_file1' FROM $table_name1";
+
+
+$retval1 = $database->execute($sql1);
+
+
+$table_name3 = "order_detail";
+$backup_file3  = $date."orderDetailBackup.sql";
+$sql3 = "SELECT * INTO OUTFILE '$backup_file3' FROM $table_name3";
+
+
+$retval3 = $database->execute($sql3);
+
+echo "Backed-up  data successfully\n";
+
+
+//end of back up script

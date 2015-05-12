@@ -1,0 +1,34 @@
+create table InventoryFoodCategory(
+foodCat_id	int auto_increment,
+category_name varchar(100) not null,
+Primary Key(foodCat_id)
+)
+
+
+create table InventoryFood(
+food_id	int auto_increment,
+foodCat_id	int not null,
+food_name varchar(100) not null,
+Primary Key(food_id),
+Foreign Key(foodCat_id) references InventoryFoodCategory(foodCat_id)
+)
+
+CREATE TABLE IF NOT EXISTS stockFood (
+  stock_id int(11) NOT NULL AUTO_INCREMENT,
+  current_quantity int(11) NOT NULL,
+  food_id int(11) NOT NULL,
+  PRIMARY KEY (stock_id),
+  Foreign Key(food_id) references InventoryFood(food_id)
+)
+
+CREATE TABLE IF NOT EXISTS food_log_entry (
+  log_id int(11) NOT NULL AUTO_INCREMENT,
+  user_id int(11) NOT NULL,
+  stock_id int(11) NOT NULL,
+  log_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  operation_type varchar(10) NOT NULL DEFAULT 'Inflow',
+  quantity int(11) NOT NULL,
+  PRIMARY KEY (log_id),
+ Foreign Key(user_id) references user(user_id),
+ Foreign Key(stock_id) references stockFood(stock_id)
+)
